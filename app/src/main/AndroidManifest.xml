@@ -22,8 +22,9 @@
 
         <!-- <meta-data android:name="com.example.yoindy.liveat500px.configguration.GlideConfiguration" -->
         <!-- android:value="GlideModule"/> -->
-        <activity android:name=".activity.MoreInfoActivity"
-            android:theme="@style/AppThemeWithActionBar"></activity>
+        <activity
+            android:name=".activity.MoreInfoActivity"
+            android:theme="@style/AppThemeWithActionBar" />
     </application>
 
 </manifest>

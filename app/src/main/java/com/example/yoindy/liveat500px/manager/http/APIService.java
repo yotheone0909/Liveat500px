@@ -21,5 +21,5 @@ public interface APIService {
     Call<PhotoItemCollectionDao> loadPhotoListAfterId(@Path("id") int id);
 
     @POST("list/before/{id}")
-    Call<PhotoItemCollectionDao> loadPhotoListฺBeforeId(@Path("id") int id);
+    Call<PhotoItemCollectionDao> loadPhotoListBeforeId(@Path("id") int id);
 }

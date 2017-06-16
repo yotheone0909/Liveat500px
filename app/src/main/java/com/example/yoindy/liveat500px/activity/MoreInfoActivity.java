@@ -2,9 +2,11 @@ package com.example.yoindy.liveat500px.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.view.Menu;
 import android.view.MenuItem;
 
 import com.example.yoindy.liveat500px.R;
+import com.example.yoindy.liveat500px.dao.PhotoItemDao;
 import com.example.yoindy.liveat500px.fragment.MoreInfoFragment;
 
 public class MoreInfoActivity extends AppCompatActivity {
@@ -16,9 +18,11 @@ public class MoreInfoActivity extends AppCompatActivity {
 
         initInstances();
 
+        PhotoItemDao dao = getIntent().getParcelableExtra("dao");
+
         if (savedInstanceState == null){
             getSupportFragmentManager().beginTransaction()
-                    .add(R.id.contentContainer, MoreInfoFragment.newInstance())
+                    .add(R.id.contentContainer, MoreInfoFragment.newInstance(dao))
                     .commit();
         }
 

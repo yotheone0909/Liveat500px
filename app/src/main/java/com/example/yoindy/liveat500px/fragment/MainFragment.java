@@ -151,7 +151,7 @@ public class MainFragment extends Fragment {
         int MiniId = photoListManager.getMinimumId();
         Call<PhotoItemCollectionDao> call = HttpManager.getInstance()
                 .getService()
-                .loadPhotoListฺBeforeId(MiniId);
+                .loadPhotoListBeforeId(MiniId);
         call.enqueue(new PhotoListLoadCallback(PhotoListLoadCallback.MODE_LOAD_MORE));
 
     }
